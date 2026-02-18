@@ -1,0 +1,46 @@
+[project]
+name = "docops-governance-workbench"
+version = "0.1.0"
+description = "Automated Copy Compliance Tool | Python, LangChain"
+requires-python = ">=3.10"
+dependencies = [
+    "typer>=0.9.0",
+    "rich>=13.0",
+    "pyyaml>=6.0",
+    "markdown-it-py>=3.0",
+    "mwparserfromhell>=0.6",
+    "langchain-openai>=0.1.0",
+    "langchain-core>=0.2.0",
+    "httpx>=0.25",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "ruff>=0.1.0",
+    "mypy>=1.0",
+]
+mcp = [
+    "mcp[cli]>=1.0",
+]
+
+[project.scripts]
+docops = "docops.cli:main"
+
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["docops*"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 120
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "network: marks tests that require network access (deselect with '-m \"not network\"')",
+]

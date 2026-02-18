@@ -1,0 +1,55 @@
+# DocOps Governance Workbench Configuration
+
+output_format: "console"
+fail_on: "error"
+
+llm:
+  enabled: false
+  model: "gpt-4o"
+
+checks:
+  passive-voice:
+    enabled: true
+    severity: "warning"
+
+  heading-hierarchy:
+    enabled: true
+    severity: "warning"
+
+  heading-casing:
+    enabled: true
+    severity: "info"
+    style: "sentence"
+
+  line-length:
+    enabled: true
+    severity: "info"
+    max_length: 120
+
+  list-consistency:
+    enabled: true
+    severity: "warning"
+
+  code-block-language:
+    enabled: true
+    severity: "warning"
+
+  terminology:
+    enabled: true
+    severity: "warning"
+    glossary_path: "glossary/default.yml"
+    llm_enabled: false
+
+  aws-key-exposed:
+    enabled: true
+    severity: "error"
+
+  pii-detected:
+    enabled: true
+    severity: "error"
+    disabled_subtypes: []
+
+exclude:
+  - "node_modules/**"
+  - ".git/**"
+  - ".venv/**"

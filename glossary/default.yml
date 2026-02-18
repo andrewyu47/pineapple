@@ -1,0 +1,43 @@
+# Default Terminology Glossary
+# Each entry: pattern (regex), preferred replacement, severity, reason
+
+terms:
+  - pattern: "\\bblacklist\\b"
+    preferred: "blocklist"
+    severity: "warning"
+    reason: "Use inclusive language."
+
+  - pattern: "\\bwhitelist\\b"
+    preferred: "allowlist"
+    severity: "warning"
+    reason: "Use inclusive language."
+
+  - pattern: "\\bmaster\\b(?:\\s+branch)?"
+    preferred: "main"
+    severity: "info"
+    reason: "Use inclusive language for branch naming."
+
+  - pattern: "\\bslave\\b"
+    preferred: "replica / secondary / follower"
+    severity: "warning"
+    reason: "Use inclusive language."
+
+  - pattern: "\\bsimply\\b|\\bjust\\b|\\beasy\\b|\\bobviously\\b"
+    preferred: "(remove the word)"
+    severity: "info"
+    reason: "Minimizing language can alienate readers who find the topic difficult."
+
+  - pattern: "\\betc\\.?\\b"
+    preferred: "(be specific)"
+    severity: "info"
+    reason: "'Etc.' is vague. List the actual items or say 'and similar'."
+
+  - pattern: "\\bplease\\b"
+    preferred: "(remove or rephrase)"
+    severity: "info"
+    reason: "Technical docs should be direct, not polite requests."
+
+  - pattern: "\\bhe\\b|\\bshe\\b|\\bhis\\b|\\bher\\b"
+    preferred: "they / their / the user"
+    severity: "info"
+    reason: "Use gender-neutral language."

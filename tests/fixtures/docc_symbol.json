@@ -1,0 +1,211 @@
+{
+  "schemaVersion": { "major": 0, "minor": 3, "patch": 0 },
+  "kind": "symbol",
+  "identifier": {
+    "url": "doc://com.apple.avkit/documentation/AVKit/AVPlayerViewController",
+    "interfaceLanguage": "swift"
+  },
+  "abstract": [
+    {
+      "type": "text",
+      "text": "A view controller that displays content from a player and presents a native user interface to control playback."
+    }
+  ],
+  "metadata": {
+    "title": "AVPlayerViewController",
+    "role": "symbol",
+    "roleHeading": "Class",
+    "symbolKind": "class",
+    "modules": [{ "name": "AVKit" }],
+    "externalID": "c:objc(cs)AVPlayerViewController",
+    "platforms": [
+      { "name": "iOS", "introducedAt": "8.0", "beta": false, "deprecated": false, "unavailable": false },
+      { "name": "iPadOS", "introducedAt": "8.0", "beta": false, "deprecated": false, "unavailable": false },
+      { "name": "Mac Catalyst", "introducedAt": "13.1", "beta": false, "deprecated": false, "unavailable": false },
+      { "name": "tvOS", "introducedAt": "9.0", "beta": false, "deprecated": false, "unavailable": false },
+      { "name": "visionOS", "introducedAt": "1.0", "beta": false, "deprecated": false, "unavailable": false }
+    ],
+    "fragments": [
+      { "kind": "keyword", "text": "class" },
+      { "kind": "text", "text": " " },
+      { "kind": "identifier", "text": "AVPlayerViewController" }
+    ],
+    "navigatorTitle": [
+      { "kind": "identifier", "text": "AVPlayerViewController" }
+    ]
+  },
+  "hierarchy": {
+    "paths": [
+      [
+        "doc://com.apple.documentation/documentation/technologies",
+        "doc://com.apple.avkit/documentation/AVKit"
+      ]
+    ]
+  },
+  "primaryContentSections": [
+    {
+      "kind": "declarations",
+      "declarations": [
+        {
+          "platforms": ["iOS", "iPadOS", "Mac Catalyst", "tvOS", "visionOS"],
+          "languages": ["swift"],
+          "tokens": [
+            { "kind": "attribute", "text": "@" },
+            { "kind": "attribute", "text": "MainActor" },
+            { "kind": "text", "text": " " },
+            { "kind": "keyword", "text": "class" },
+            { "kind": "text", "text": " " },
+            { "kind": "identifier", "text": "AVPlayerViewController" }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "content": [
+        {
+          "type": "heading",
+          "text": "Overview",
+          "level": 2,
+          "anchor": "overview"
+        },
+        {
+          "type": "paragraph",
+          "inlineContent": [
+            {
+              "type": "text",
+              "text": "Use an "
+            },
+            {
+              "type": "reference",
+              "identifier": "doc://com.apple.avkit/documentation/AVKit/AVPlayerViewController",
+              "isActive": true
+            },
+            {
+              "type": "text",
+              "text": " object to display video content in your app."
+            }
+          ]
+        },
+        {
+          "type": "aside",
+          "style": "important",
+          "name": "Important",
+          "content": [
+            {
+              "type": "paragraph",
+              "inlineContent": [
+                {
+                  "type": "text",
+                  "text": "The framework doesn't support subclassing "
+                },
+                {
+                  "type": "codeVoice",
+                  "code": "AVPlayerViewController"
+                },
+                {
+                  "type": "text",
+                  "text": "."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "codeListing",
+          "syntax": "swift",
+          "code": [
+            "let controller = AVPlayerViewController()",
+            "controller.player = AVPlayer(url: videoURL)",
+            "present(controller, animated: true)"
+          ]
+        }
+      ]
+    }
+  ],
+  "topicSections": [
+    {
+      "title": "Creating a player view controller",
+      "anchor": "Creating-a-player-view-controller",
+      "identifiers": [
+        "doc://com.apple.avkit/documentation/AVKit/AVPlayerViewController/init()"
+      ]
+    },
+    {
+      "title": "Configuring the player",
+      "anchor": "Configuring-the-player",
+      "identifiers": [
+        "doc://com.apple.avkit/documentation/AVKit/AVPlayerViewController/player"
+      ]
+    }
+  ],
+  "relationshipsSections": [
+    {
+      "type": "inheritsFrom",
+      "title": "Inherits From",
+      "kind": "relationships",
+      "identifiers": [
+        "doc://com.externally.resolved.symbol/c:objc(cs)UIViewController"
+      ]
+    }
+  ],
+  "references": {
+    "doc://com.apple.avkit/documentation/AVKit/AVPlayerViewController": {
+      "type": "topic",
+      "kind": "symbol",
+      "role": "symbol",
+      "url": "/documentation/avkit/avplayerviewcontroller",
+      "title": "AVPlayerViewController",
+      "identifier": "doc://com.apple.avkit/documentation/AVKit/AVPlayerViewController",
+      "abstract": [
+        { "type": "text", "text": "A view controller that displays content from a player and presents a native user interface to control playback." }
+      ],
+      "fragments": [
+        { "kind": "keyword", "text": "class" },
+        { "kind": "text", "text": " " },
+        { "kind": "identifier", "text": "AVPlayerViewController" }
+      ]
+    },
+    "doc://com.apple.avkit/documentation/AVKit/AVPlayerViewController/init()": {
+      "type": "topic",
+      "kind": "symbol",
+      "role": "symbol",
+      "url": "/documentation/avkit/avplayerviewcontroller/init()",
+      "title": "init()",
+      "identifier": "doc://com.apple.avkit/documentation/AVKit/AVPlayerViewController/init()",
+      "abstract": [
+        { "type": "text", "text": "Creates a player view controller." }
+      ]
+    },
+    "doc://com.apple.avkit/documentation/AVKit/AVPlayerViewController/player": {
+      "type": "topic",
+      "kind": "symbol",
+      "role": "symbol",
+      "url": "/documentation/avkit/avplayerviewcontroller/player",
+      "title": "player",
+      "identifier": "doc://com.apple.avkit/documentation/AVKit/AVPlayerViewController/player",
+      "abstract": [
+        { "type": "text", "text": "The player that provides the media content for the view controller." }
+      ]
+    },
+    "doc://com.externally.resolved.symbol/c:objc(cs)UIViewController": {
+      "type": "topic",
+      "kind": "symbol",
+      "role": "symbol",
+      "url": "",
+      "title": "UIViewController",
+      "identifier": "doc://com.externally.resolved.symbol/c:objc(cs)UIViewController"
+    }
+  },
+  "variants": [
+    {
+      "paths": ["/documentation/avkit/avplayerviewcontroller"],
+      "traits": [{ "interfaceLanguage": "swift" }]
+    },
+    {
+      "paths": ["/documentation/avkit/avplayerviewcontroller"],
+      "traits": [{ "interfaceLanguage": "occ" }]
+    }
+  ],
+  "sections": []
+}

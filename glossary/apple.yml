@@ -1,0 +1,70 @@
+# Apple Terminology Glossary
+# Enforces correct capitalization for Apple platforms and technologies.
+# Uses case_sensitive: true so patterns match exact casing.
+
+terms:
+  - pattern: "\\bVisionOS\\b|\\bVision OS\\b|\\bvision os\\b|\\bVISIONOS\\b|\\bvision OS\\b"
+    preferred: "visionOS"
+    severity: "info"
+    reason: "Use official Apple capitalization."
+    case_sensitive: true
+
+  - pattern: "\\bSwift UI\\b|\\bswiftui\\b|\\bSWIFTUI\\b|\\bswiftUI\\b|\\bSwiftui\\b"
+    preferred: "SwiftUI"
+    severity: "info"
+    reason: "Use official Apple capitalization."
+    case_sensitive: true
+
+  - pattern: "\\bUI Kit\\b|\\bUikit\\b|\\bUIKIT\\b|\\buikit\\b|\\bUi Kit\\b"
+    preferred: "UIKit"
+    severity: "info"
+    reason: "Use official Apple capitalization."
+    case_sensitive: true
+
+  - pattern: "\\bXCode\\b|\\bxcode\\b|\\bXCODE\\b|\\bX-Code\\b|\\bx code\\b"
+    preferred: "Xcode"
+    severity: "info"
+    reason: "Use official Apple capitalization."
+    case_sensitive: true
+
+  - pattern: "\\bAppStore\\b|\\bapp store\\b|\\bappstore\\b|\\bAPP STORE\\b"
+    preferred: "App Store"
+    severity: "info"
+    reason: "Use official Apple capitalization with space."
+    case_sensitive: true
+
+  - pattern: "\\bICloud\\b|\\bicloud\\b|\\bICLOUD\\b|\\bi Cloud\\b|\\bI Cloud\\b"
+    preferred: "iCloud"
+    severity: "info"
+    reason: "Use official Apple capitalization."
+    case_sensitive: true
+
+  - pattern: "\\bMacOS\\b|\\bMACOS\\b|\\bMac OS\\b|\\bmacos\\b|\\bOSX\\b|\\bOS X\\b"
+    preferred: "macOS"
+    severity: "info"
+    reason: "Use official Apple capitalization."
+    case_sensitive: true
+
+  - pattern: "\\bIOS\\b|\\bIos\\b|\\bi OS\\b"
+    preferred: "iOS"
+    severity: "info"
+    reason: "Use official Apple capitalization."
+    case_sensitive: true
+
+  - pattern: "\\bWatchOS\\b|\\bWatch OS\\b|\\bWATCHOS\\b|\\bwatchos\\b"
+    preferred: "watchOS"
+    severity: "info"
+    reason: "Use official Apple capitalization."
+    case_sensitive: true
+
+  - pattern: "\\bTvOS\\b|\\bTVOS\\b|\\bTv OS\\b|\\btvos\\b"
+    preferred: "tvOS"
+    severity: "info"
+    reason: "Use official Apple capitalization."
+    case_sensitive: true
+
+  - pattern: "\\bIpadOS\\b|\\biPados\\b|\\bIPADOS\\b|\\bipad os\\b|\\bIPad OS\\b"
+    preferred: "iPadOS"
+    severity: "info"
+    reason: "Use official Apple capitalization."
+    case_sensitive: true

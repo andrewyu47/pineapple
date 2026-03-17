@@ -1,0 +1,40 @@
+name: Doc Governance Linter
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**/*.md'
+      - 'glossary/**'
+      - '.docops.yml'
+  pull_request:
+    paths:
+      - '**/*.md'
+      - 'glossary/**'
+      - '.docops.yml'
+
+jobs:
+  lint-docs:
+    name: Lint Documentation
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -e ".[dev]"
+
+      - name: Run doc governance linter
+        run: |
+          echo "=== DocOps Governance Workbench — Layer 1: Mechanical Checks ==="
+          echo "Checking: terminology, formatting, passive voice, heading hierarchy, code blocks, PII, secrets"
+          echo ""
+          python -c "from docops.cli import app; app()" lint README.md docs/ --no-llm --severity warning
+
+      - name: Run tests
+        run: pytest -m "not network" --tb=short
